@@ -2,9 +2,9 @@ import React, { useCallback, useContext, useState } from "react";
 import { InputType } from "../type";
 import { Context } from "./Context";
 import {
-  combineBalanceFromDuplicates,
+  combineBalanceDuplicates,
   groupData,
-  keepFirstFromDuplicates,
+  keepFirstDuplicates,
   validationCheck,
 } from "../helper/DisperseLogic";
 
@@ -18,7 +18,7 @@ export const useDisperse = () => {
   ]);
 
   const keepFirst = useCallback(() => {
-    const validatedToken = keepFirstFromDuplicates(store.validatedToken);
+    const validatedToken = keepFirstDuplicates(store.validatedToken);
     const errors = groupData(validationCheck(validatedToken));
     setTokenList(validatedToken);
     setStore({
@@ -29,7 +29,7 @@ export const useDisperse = () => {
   }, [store, setStore]);
 
   const combineBalance = useCallback(() => {
-    const validatedToken = combineBalanceFromDuplicates(store.validatedToken);
+    const validatedToken = combineBalanceDuplicates(store.validatedToken);
     const errors = groupData(validationCheck(validatedToken));
     setTokenList(validatedToken);
     setStore({

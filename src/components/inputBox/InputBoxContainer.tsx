@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { InputType } from '../../type';
 import { Context } from '../../utils/Context';
-import { getSymbols } from '../../helper/DisperseLogic';
+import { Symbols } from '../../helper/DisperseLogic';
 
 interface InputBoxContainerProps {
   inputList: InputType[];
@@ -37,7 +37,7 @@ const InputBoxContainer: React.FC<InputBoxContainerProps> = ({
         lineNo: index + 1,
         address,
         amount,
-        splitingOperater: getSymbols(line),
+        splitingOperater: Symbols(line),
       };
     });
 

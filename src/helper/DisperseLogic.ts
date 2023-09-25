@@ -1,6 +1,6 @@
 import { ErrorType, InputType } from "../type";
 
-export const getSymbols = (addressWithAmount: String) => {
+export const Symbols = (addressWithAmount: String) => {
   if (addressWithAmount.includes("=")) {
     return "=";
   } else if (addressWithAmount.includes(",")) {
@@ -10,7 +10,7 @@ export const getSymbols = (addressWithAmount: String) => {
   }
 };
 
-export const keepFirstFromDuplicates = (inputArray: InputType[]) => {
+export const keepFirstDuplicates = (inputArray: InputType[]) => {
   const seenStrings: any = {};
   const resultArray: InputType[] = [];
 
@@ -24,7 +24,7 @@ export const keepFirstFromDuplicates = (inputArray: InputType[]) => {
   return resultArray;
 };
 
-export const combineBalanceFromDuplicates = (inputArray: InputType[]) => {
+export const combineBalanceDuplicates = (inputArray: InputType[]) => {
   const resultMap: { [key: string]: InputType } = {};
   inputArray.forEach(({ lineNo, address, amount, splitingOperater }) => {
     const key = address;
