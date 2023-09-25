@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { InputType } from '../../type';
-import { MyContext } from '../../utils/MyContext';
+import { Context } from '../../utils/Context';
 import { getSymbols } from '../../helper/DisperseLogic';
 
 interface InputBoxContainerProps {
@@ -13,7 +13,7 @@ const InputBoxContainer: React.FC<InputBoxContainerProps> = ({
   setInputList,
 }) => {
   const [inputText, setInputText] = useState('');
-  const { store } = useContext(MyContext);
+  const { store } = useContext(Context);
 
   useEffect(() => {
     const updatedInputText = store.validatedToken

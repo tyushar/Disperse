@@ -6,7 +6,7 @@ export interface StoreType {
   validatedToken: InputType[];
 }
 
-export interface MyContextType {
+export interface ContextType {
   store: StoreType;
   setStore: React.Dispatch<React.SetStateAction<StoreType>>;
 }

@@ -1,6 +1,6 @@
 import React, { useCallback, useContext, useState } from "react";
 import { InputType } from "../type";
-import { MyContext } from "./MyContext";
+import { Context } from "./Context";
 import {
   combineBalanceFromDuplicates,
   groupData,
@@ -11,7 +11,7 @@ import {
 // useDisperse Custom Hook
 
 export const useDisperse = () => {
-  const { store, setStore } = useContext(MyContext);
+  const { store, setStore } = useContext(Context);
 
   const [tokenList, setTokenList] = useState<InputType[]>([
     { lineNo: 1, address: "", amount: "", splitingOperater: "" },

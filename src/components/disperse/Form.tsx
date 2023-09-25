@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { InputType } from '../../type';
 import InputBoxContainer from '../inputBox/InputBoxContainer';
-import { MyContext } from '../../utils/MyContext';
+import { Context } from '../../utils/Context';
 
 interface Props {
   tokenList: InputType[];
@@ -10,7 +10,7 @@ interface Props {
 }
 
 const DisperseForm: React.FC<Props> = ({ tokenList, setTokenList, submit }) => {
-  const { store } = useContext(MyContext);
+  const { store } = useContext(Context);
 
   return (
     <form onSubmit={submit} className="space-y-4">

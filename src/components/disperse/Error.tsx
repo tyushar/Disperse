@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { MyContext } from '../../utils/MyContext';
+import { Context } from '../../utils/Context';
 
 interface Props {
   keepFirst: () => void;
@@ -7,7 +7,7 @@ interface Props {
 }
 
 const DisperseError: React.FC<Props> = ({ keepFirst, combineBalance }) => {
-  const { store } = useContext(MyContext);
+  const { store } = useContext(Context);
 
   return (
     <>
