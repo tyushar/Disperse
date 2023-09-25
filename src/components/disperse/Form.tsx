@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { InputType } from '../../type';
-import InputBoxContainer from '../inputs/InputBoxContainer';
+import InputBoxContainer from '../inputBox/InputBoxContainer';
 import { MyContext } from '../../utils/MyContext';
 
 interface Props {
